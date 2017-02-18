@@ -13,7 +13,7 @@ if gender == '男':
                  middle_n_tone = convert(l[0:len('汉')])
                  last_n_tone = convert(l[len('汉'):len(l)-1])
                  if middle_n_tone != first_n_tone and last_n_tone != middle_n_tone : 
-                     print first_name,first_n_tone,l,middle_n_tone,last_n_tone 
+                     print first_name,l 
              else:
                  print convert(l[0:len('汉')])
 elif gender == '女':
