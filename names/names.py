@@ -15,6 +15,7 @@ if gender == '男':
                  if middle_n_tone != first_n_tone and last_n_tone != middle_n_tone : 
                      print first_name,l 
              else:
-                 print convert(l[0:len('汉')])
+                 #print convert(l[0:len('汉')])
+                 print ''
 elif gender == '女':
     print '女'
