@@ -8,7 +8,8 @@ if gender == '男':
     with open('boy_name.txt') as f:
          for l in f:
              if l[0]=='-':
-                 continue
+                 print l
+                 #continue
              elif len(l)>(len('汉')+1): 
                  middle_n_tone = convert(l[0:len('汉')])
                  last_n_tone = convert(l[len('汉'):len(l)-1])
