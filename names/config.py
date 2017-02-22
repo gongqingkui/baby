@@ -1,4 +1,6 @@
 ﻿#encoding:utf-8
+import traceback
+
 first_name = '巩'
 gender = '男'
 birthday='20170407120000'
@@ -34,10 +36,12 @@ def score(x,m):
         response = urllib2.urlopen(req)
         html_page = response.read()
     except Exception as e:
+        traceback.print_exc()
         print e
     soup = BeautifulSoup(html_page,'html.parser')
     try:
         score = soup.find_all('font')
     except Exception as e:
+        traceback.print_exc()
         print e
     return score[1].string
