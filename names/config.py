@@ -21,3 +21,7 @@ def convert(ch):
         for line in f:
             if ch in line:
                  return line[len(line)-2:len(line)]
+
+
+def score(x,m):
+    print (x,m)
