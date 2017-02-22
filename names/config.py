@@ -1,4 +1,4 @@
-#encoding:utf-8
+﻿#encoding:utf-8
 first_name = '巩'
 gender = '男'
 birthday='20170407120000'
@@ -22,6 +22,18 @@ def convert(ch):
             if ch in line:
                  return line[len(line)-2:len(line)]
 
-
 def score(x,m):
     print (x,m)
+    import urllib
+    import urllib2
+    from bs4 import BeautifulSoup
+    url = 'http://xmcs.buyiju.com/dafen.php'
+    values ={'xs':x,'mz':m}
+    data = urllib.urlencode(values)
+    print data
+    req = urllib2.Request(url,data)
+    response = urllib2.urlopen(req)
+    html_page = response.read()
+    soup = BeautifulSoup(html_page,'html.parser')
+    score = soup.find_all('font')
+    return int(score[1].string)
