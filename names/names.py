@@ -1,7 +1,6 @@
 #encoding:utf-8
 from config import * 
 
-print(score('巩','庆奎'))
 print '%s宝宝姓%s.出生在%s日，出生于%s%s'%(gender,first_name,birthday,birth_p,birth_c)
 first_n_tone = convert(first_name)
 if gender == '男':
