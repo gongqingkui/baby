@@ -6,8 +6,8 @@ boy_name.txt或者girl_name.txt中；运行python names.py即可得到
 
 
 ###平仄规律
-如果姓名为N声调，则第二个字为非第一字的声调，第三个字为非第二字的音调。这样的名字读起来比较朗朗上口。
+第二个字为非第一字的声调，第三个字为非第二字的音调。这样的名字读起来比较朗朗上口。
 
 
 ###评分规则
-根据http://xmcs.buyiju.com/dafen.php网站的打分程序，Post数据查看得分。
+根据http://xmcs.buyiju.com/dafen.php  网站的打分程序，Post数据查看得分。
