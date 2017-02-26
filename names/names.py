@@ -29,4 +29,26 @@ if gender == '男':
                          continue
 
 elif gender == '女':
-    print '女'
+    with open('girl_name.txt') as f:
+         for l in f:
+             if l[0]=='-':
+                 print l
+                 #continue
+             elif len(l)>(len('汉')+1): 
+                 middle_n_tone = convert(l[0:len('汉')])
+                 last_n_tone = convert(l[len('汉'):len(l)-1])
+                 if middle_n_tone != first_n_tone and last_n_tone != middle_n_tone : 
+                     try:
+                         print first_name,l[:len(l)-1],score(first_name,l)
+                     except Exception as e:
+                         print e 
+                         continue
+
+             else:
+                 middle_n_tone = convert(l[0:len('汉')])
+                 if middle_n_tone != first_n_tone : 
+                     try:
+                         print first_name,l[:len(l)-1],score(first_name,l)
+                     except Exception as e:
+                         print e 
+                         continue

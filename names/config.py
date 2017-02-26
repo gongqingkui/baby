@@ -2,7 +2,7 @@
 import traceback
 
 first_name = '巩'
-gender = '男'
+gender = '女'
 birthday='20170407120000'
 birth_p='河北'
 birth_c='沧州'
