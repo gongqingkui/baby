@@ -1,4 +1,4 @@
-#encodin:utf-8
+#encoding:utf-8
 from config import * 
 
 print '%s±¦±¦ĞÕ%s,³öÉúÓÚ%s,%s,%s'%(gender,first_name,birthday,birth_p,birth_c)
