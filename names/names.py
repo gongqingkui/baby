@@ -4,7 +4,7 @@ from config import *
 print '%s宝宝姓%s,出生于%s,%s,%s'%(gender,first_name,birthday,birth_p,birth_c)
 first_n_tone = convert(first_name)
 
-if gender == '男:
+if gender == '男':
     f = open('boy_name.txt')
 elif gender == '女':
     f = open('girl_name.txt')
