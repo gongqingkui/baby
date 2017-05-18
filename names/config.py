@@ -1,11 +1,11 @@
 ﻿#encoding:utf-8
 import traceback
 
-first_name = '巩'
+first_name = '张'
 gender = '女'
-birthday='20170407120000'
-birth_p='河北'
-birth_c='沧州'
+birthday='20170516120000'
+birth_p='山东'
+birth_c='滕州'
 
 
 
