@@ -1,4 +1,4 @@
-#encoding:utf-8
+#encodin:utf-8
 from config import * 
 
 print '%s宝宝姓%s.出生在%s日，出生于%s%s'%(gender,first_name,birthday,birth_p,birth_c)

@@ -1,4 +1,5 @@
 ﻿#encoding:utf-8
+
 import traceback
 
 first_name = '张'
