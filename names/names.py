@@ -1,19 +1,19 @@
 #encodin:utf-8
 from config import * 
 
-print '%så®å®å§“%s.å‡ºç”Ÿåœ¨%sæ—¥ï¼Œå‡ºç”ŸäºŽ%s%s'%(gender,first_name,birthday,birth_p,birth_c)
+print '%s±¦±¦ÐÕ%s,³öÉúÓÚ%s,%s,%s'%(gender,first_name,birthday,birth_p,birth_c)
 first_n_tone = convert(first_name)
 
-if gender == 'ç”·':
+if gender == 'ÄÐ:
     f = open('boy_name.txt')
-elif gender == 'å¥³':
+elif gender == 'Å®':
     f = open('girl_name.txt')
 for l in f:
     if l[0]=='-':
         print l
-    elif len(l)>(len('æ±‰')+1): 
-         middle_n_tone = convert(l[0:len('æ±‰')])
-         last_n_tone = convert(l[len('æ±‰'):len(l)-1])
+    elif len(l)>(len('Çì')+1): 
+         middle_n_tone = convert(l[0:len('Çì')])
+         last_n_tone = convert(l[len('Çì'):len(l)-1])
          
          if middle_n_tone != first_n_tone and last_n_tone != middle_n_tone : 
              try:
@@ -22,7 +22,7 @@ for l in f:
                  print e 
                  continue
          else:
-             middle_n_tone = convert(l[0:len('æ±‰')])
+             middle_n_tone = convert(l[0:len('Çì')])
              if middle_n_tone != first_n_tone : 
                  try:
                      print first_name,l[:len(l)-1],score(first_name,l)
