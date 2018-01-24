@@ -8,6 +8,7 @@ if gender == 'ÄÐ':
     f = open('boy_name.txt')
 elif gender == 'Å®':
     f = open('girl_name.txt')
+f = open('girl_name.txt')
 for l in f:
     if l[0]=='-':
         print l
