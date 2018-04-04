@@ -18,15 +18,7 @@ for l in f:
          last_n_tone = convert(l[3:len(l)-1])
          
          if middle_n_tone != first_n_tone and last_n_tone != middle_n_tone : 
-             print first_name,l[:-1],score(first_name,l)
-             '''
-             try:
-                 #print first_name,l[:-1]
-                 print first_name,l[:-1],score(first_name,l)
-             except Exception as e:
-                 print e
-                 continue
-             '''
+             print first_name,l[:-1],score(first_name.decode('utf-8'),l.decode('utf-8'))
          else:
              middle_n_tone = convert(l[0:3])
              if middle_n_tone != first_n_tone : 

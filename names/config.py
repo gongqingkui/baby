@@ -1,6 +1,7 @@
 ﻿#encoding:utf-8
 import traceback
 import pprint
+import re
 
 first_name = '王'
 gender = 'M'
@@ -24,27 +25,16 @@ def convert(ch):
 
 def score(x,m):
     '''score of x m'''
-    import urllib
-    import urllib2
-    from bs4 import BeautifulSoup
+    import requests
     url = 'http://xmcs.buyiju.com/dafen.php'
-    values ={'xs':x,'mz':m}
+    values ={'xs':x,'mz':m,'action':'test'}
 
-    #print x,m
     try:
-        data = urllib.urlencode(values)
-        req = urllib2.Request(url,data)
-        response = urllib2.urlopen(req)
-        html_page = response.read()
-        print html_page
-    except Exception as e:
-        traceback.print_exc()
-        print e
-    try:
-        soup = BeautifulSoup(html_page,'html.parser')
-        score = soup.find_all('font')
-        pprint.pprint(score)
-        return score[0].string
+        r = requests.post(url,data=values) 
+        print r.text
+        #rs = re.findall('<font color=ff0000 size=5>(.+)</font>',r.text.encode('utf-8'))
+        rs = re.findall('font (.+)font',r.text)
+        return rs[0]
     except Exception as e:
         traceback.print_exc()
         print e
